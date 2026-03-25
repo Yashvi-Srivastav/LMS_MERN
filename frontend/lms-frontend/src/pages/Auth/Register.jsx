@@ -1,4 +1,4 @@
-import { Spinner } from '@/components/ui/spinner'
+import { Spinner } from '@/components/ui/Spinner'
 import { useRegisterHook } from '@/hooks/User.hook'
 import React from 'react'
 import { useForm } from 'react-hook-form'

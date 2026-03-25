@@ -2,7 +2,7 @@ import { useGetSingleCourseHook } from '@/hooks/course.hook'
 import { usePayment } from '@/hooks/payment.hook'
 import React from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { Spinner } from '@/components/ui/spinner'
+import { Spinner } from '@/components/ui/Spinner'
 
 const SingleCourse = () => {
   const { id } = useParams()

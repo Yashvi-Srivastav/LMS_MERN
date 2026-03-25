@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import React from 'react'
 import { useForm } from 'react-hook-form'
-import { Spinner } from '@/components/ui/spinner'
+import { Spinner } from '@/components/ui/Spinner'
 import { useLoginHook } from '@/hooks/User.hook'
 
 const Login = () => {
