@@ -12,7 +12,7 @@ import {useForm} from 'react-hook-form'
 import { useCreateModule } from '@/hooks/module.hook'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { createModuleApi } from '@/Api/module.api'
-import { Spinner } from '@/components/ui/Spinner'
+import { Spinner } from "../ui/Spinner";
 
 
     const CreateModule = () => {
