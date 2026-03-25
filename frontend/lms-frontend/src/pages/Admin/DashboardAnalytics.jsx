@@ -23,7 +23,7 @@ const DashboardAnalytics = () => {
     const start = new Date("2026-02-20")
     start.setDate(end.getDate() - 6)
     end.setDate(end.getDate() + 1)
-    const toStr = (d) => d.toISOString().split('i')[0]
+    const toStr = (d) => d.toISOString().split('T')[0]
     return { startDate: toStr(start), endDate: toStr(end) }
   }, [])
 

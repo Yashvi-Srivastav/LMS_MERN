@@ -15,7 +15,7 @@ export const ProtectedRoute=({children})=>{
         if(data){
         setUser(data)
     }
-    })
+    }, [data])
 
     if(isLoading){
         return <div>Loading...</div>
@@ -25,7 +25,7 @@ export const ProtectedRoute=({children})=>{
         return <Navigate to='/login' replace/>
     }
 
-    if(!data){
+    if(!isLoading && !data){
         return <Navigate to='/login' replace/>
     }
 

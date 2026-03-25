@@ -61,7 +61,7 @@ const MainRoutes = () => {
             <Quiz/>
           </ProtectedRoute>
          }/>
-         //Dashboard
+        
          <Route path='/dashboard' element={
           <ProtectedRoute>
               <Dashboard/>
