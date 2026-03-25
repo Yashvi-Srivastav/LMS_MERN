@@ -16,7 +16,11 @@ const app = express()
 
 
 app.use(cors({
-    origin:"https://lms-mern-i9r6vbhp1-yashvisriv-2599s-projects.vercel.app",
+    origin:[
+        "http://localhost:5173",
+    "https://lms-mern-eta.vercel.app",
+    "https://lms-mern-i9r6vbhp1-yashvisriv-2599s-projects.vercel.app"
+    ],
     credentials:true
 })
 )
