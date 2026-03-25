@@ -36,7 +36,8 @@ app.use('/api/comment', commentRoute)
 app.use('/api/payment', paymentRoute)
 app.use('/api/analytic', analyticRoute)
 
-
+app.get('/test', (req, res) => res.json({ message: "server working" }))
+app.post('/api/login-test', (req, res) => res.json({ message: "login route working" }))
 
 app.listen(ENV.PORT,()=> {
     console.log("server started")
