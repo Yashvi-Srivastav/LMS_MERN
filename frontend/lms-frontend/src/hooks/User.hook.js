@@ -43,7 +43,10 @@ export const useLoginHook = ()=>{
 export const useGetUserHook = ()=>{
     return useQuery({
         queryFn:getUser,
-        queryKey:['getUser']
+        queryKey:['getUser'],
+        retry: false,              // ✅ don't retry on 401
+    staleTime: 0,              // ✅ always fetch fresh
+    cacheTime: 0,  
     })
 }
 
@@ -55,9 +58,9 @@ export const useLoggedOut = () => {
     mutationFn: logoutApi,
     onSuccess: (data) => {
       toast.success(data?.message)
-      queryClient.clear()                        // ✅ clear react query cache
-      queryClient.setQueryData(['user'], null)   // ✅ clear user data
-      navigate('/login')                         // ✅ redirect to login
+      queryClient.removeQueries(['user'])        // ✅ remove user query
+      queryClient.clear()                        // ✅ clear all cache
+      navigate('/login', { replace: true })                       // ✅ redirect to login
     },
     onError: (err) => {
       console.log(err)
