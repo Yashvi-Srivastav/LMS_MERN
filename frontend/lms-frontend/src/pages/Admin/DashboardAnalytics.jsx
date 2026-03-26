@@ -19,8 +19,8 @@ const DashboardAnalytics = () => {
   const { data } = useGetDataHook()
 
   const { startDate, endDate } = useMemo(() => {
-    const end = new Date("2026-02-28")
-    const start = new Date("2026-02-20")
+    const end = new Date()
+    const start = new Date()
     start.setDate(end.getDate() - 6)
     end.setDate(end.getDate() + 1)
     const toStr = (d) => d.toISOString().split('T')[0]
