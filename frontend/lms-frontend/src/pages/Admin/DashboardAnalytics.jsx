@@ -38,13 +38,13 @@ const DashboardAnalytics = () => {
         <div className='mt-1 h-1 w-12 rounded-full' style={{ background: '#EF9F27' }} />
       </div>
 
-      {/* Stat cards */}
-      <div className='flex gap-5'>
-        <StatCard label="Total Courses" value={data?.courses} icon="◈" color="#EF9F27" />
-        <StatCard label="Total Enrollments" value={data?.totalEnrollments} icon="✦" color="#1D9E75" />
-        <StatCard label="Total Revenue" value={data?.totalRevenue ? `₹${data.totalRevenue}` : '0'} icon="◉" color="#534AB7" />
-        <StatCard label="Total Users" value={data?.users} icon="⊙" color="#D85A30" />
-      </div>
+
+<div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+  <StatCard label="Total Courses" value={data?.courses} icon="◈" color="#EF9F27" />
+  <StatCard label="Total Enrollments" value={data?.totalEnrollments} icon="✦" color="#1D9E75" />
+  <StatCard label="Total Revenue" value={data?.totalRevenue ? `₹${data.totalRevenue}` : '0'} icon="◉" color="#534AB7" />
+  <StatCard label="Total Users" value={data?.users} icon="⊙" color="#D85A30" />
+</div>
 
       {/* Revenue chart */}
       <div
