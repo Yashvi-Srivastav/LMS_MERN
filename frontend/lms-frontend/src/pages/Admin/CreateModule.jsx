@@ -10,9 +10,10 @@ import {
 } from "@/components/ui/dialog"
 import {useForm} from 'react-hook-form'
 import { useCreateModule } from '@/hooks/module.hook'
+import { Spinner } from '@/components/ui/Spinner'
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
 import { createModuleApi } from '@/Api/module.api'
-import { Spinner } from "../ui/Spinner";
+
 
 
     const CreateModule = () => {

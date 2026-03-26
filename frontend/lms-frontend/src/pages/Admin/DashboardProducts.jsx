@@ -4,8 +4,8 @@ import {
   DialogHeader, DialogTitle, DialogTrigger,
 } from "@/components/ui/dialog"
 import { useForm } from 'react-hook-form'
-import { Spinner } from "../ui/Spinner";
 import { toast } from 'sonner'
+import { Spinner } from '@/components/ui/Spinner'
 import { useNavigate } from 'react-router-dom'
 import { useGetCourseHook, useCreateCourseHook } from '@/hooks/course.hook'
 
