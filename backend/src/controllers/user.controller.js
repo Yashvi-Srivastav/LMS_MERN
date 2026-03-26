@@ -120,13 +120,16 @@ export const getUser = async(req,res)=>{
         console.log(`error from get User, ${error}`)
     }
 }
-
-export const logout = async(req, res)=>{
-    try {
-      return res.cookie("token","").status(201).json({
-        message:"User logged out"
-      })
-    } catch(error){
-        console.log(error)
-    }
+export const logout = async (req, res) => {
+  try {
+    return res.clearCookie("token", {
+      httpOnly: true,
+      secure: true,        // ✅ required for production HTTPS
+      sameSite: "none",    // ✅ required for cross-origin (Vercel + Render)
+    }).status(200).json({
+      message: "User logged out"
+    })
+  } catch (error) {
+    console.log(error)
+  }
 }
