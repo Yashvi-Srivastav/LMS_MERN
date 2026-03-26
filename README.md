@@ -16,6 +16,7 @@ Note: The backend is hosted on Render's free tier, so it may take 30-50 seconds 
 - Watch video lectures module by module
 - Leave comments on modules
 - Take quizzes after each module
+  
 =>For admins:
 - View an analytics dashboard with total users, courses, enrollments, and revenue
 - See a daily revenue chart for the last 7 days
@@ -32,6 +33,7 @@ Note: The backend is hosted on Render's free tier, so it may take 30-50 seconds 
 - Recharts for the analytics chart
 - Axios for API calls
 - Stripe.js for payment UI
+
 =>Backend:
 - Node.js with Express
 - MongoDB with Mongoose
@@ -77,7 +79,7 @@ VITE_STRIPE_PUBLIC_KEY=your_stripe_public_key
 npm run dev
 
 ## Testing payments
-~This project uses Stripe in test mode so no real money is involved. To test a payment use the following card details:
+This project uses Stripe in test mode so no real money is involved. To test a payment use the following card details:
 Card number: 4242 4242 4242 4242  
 Expiry: Any future date, for example 12/34  
 CVC: Any three digits, for example 123  
@@ -85,11 +87,14 @@ CVC: Any three digits, for example 123
 ## Project structure
 The project is split into two main parts:
 1.backend contains all the server-side code including controllers for auth, courses, modules, payments, quizzes, and analytics. Models define the MongoDB schemas. Routes wire everything together. Middleware handles authentication.
+
 2.frontend/lms-frontend contains the React app. Pages are split into Admin and User sections. Hooks handle all API calls using React Query. The Store folder contains Zustand stores for global state. The Api folder contains all Axios API functions.
 
 ## A few things to know
 -The admin account is determined by the email set in the ADMIN environment variable. Whoever registers with that email gets admin access automatically.
+
 -The daily revenue chart currently shows data for a fixed date range. Updating it to always show the last 7 days from today is on the improvement list.
+
 -Stripe is in test mode. To accept real payments the Stripe account would need to be verified with KYC and live keys would need to be used instead.
 
 ---
